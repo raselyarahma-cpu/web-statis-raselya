@@ -1,0 +1,191 @@
+<<!doctype html>
+    <html lang="id">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Toko Buku Kita</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Segoe UI", Arial, sans-serif;
+            }
+
+            body {
+                background-color: #fff;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            /* HEADER */
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 40px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            header h1 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #1a5fa3;
+                margin-left: 20px;
+                font-size: 15px;
+            }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+            /* MAIN */
+            main {
+                padding: 30px 40px;
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            main h2 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            main p {
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            /* KATEGORI */
+            .kategori {
+                margin-bottom: 25px;
+            }
+
+            .kategori h3 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .kategori ul {
+                margin-left: 20px;
+            }
+
+            .kategori li {
+                color: #555;
+                margin-bottom: 5px;
+            }
+
+            /* BUKU PILIHAN */
+            .buku-pilihan h3 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .grid-buku {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .card {
+                background-color: #f9f9f9;
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            .card h4 {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+
+            .card p {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 12px;
+            }
+
+            .btn-beli {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            .btn-beli:hover {
+                background-color: #f0f0f0;
+            }
+
+            /* FOOTER */
+            footer {
+                text-align: center;
+                padding: 15px;
+                border-top: 1px solid #e0e0e0;
+                font-size: 13px;
+                color: #777;
+                margin-top: 30px;
+            }
+
+            /* RESPONSIVE */
+            @media (max-width: 768px) {
+                .grid-buku {
+                    grid-template-columns: 1fr;
+                }
+
+                header {
+                    padding: 15px 20px;
+                }
+
+                main {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Toko Buku Kita</h1>
+            <nav> <a href="#">Beranda</a> <a href="#">Katalog</a> <a href="#">Kontak</a> </nav>
+        </header>
+        <main>
+            <h2>Selamat datang di Toko Buku Kita</h2>
+            <p> Kami menyediakan berbagai koleksi buku dari fiksi, non-fiksi, hingga komik. Temukan bacaan favoritimu
+                dengan harga terjangkau dan kualitas terbaik. </p>
+            <div class="kategori">
+                <h3>Kategori buku</h3>
+                <ul>
+                    <li>Fiksi</li>
+                    <li>Non-fiksi</li>
+                    <li>Komik</li>
+                </ul>
+            </div>
+            <div class="buku-pilihan">
+                <h3>Buku pilihan</h3>
+                <div class="grid-buku">
+                    <div class="card">
+                        <h4>Laut Bercerita</h4>
+                        <p>Leila S. Chudori - Fiksi</p> <button class="btn-beli">Beli</button>
+                    </div>
+                    <div class="card">
+                        <h4>Sapiens</h4>
+                        <p>Yuval Noah Harari - Non-fiksi</p> <button class="btn-beli">Beli</button>
+                    </div>
+                    <div class="card">
+                        <h4>Si Juki</h4>
+                        <p>Faza Meonk - Komik</p> <button class="btn-beli">Beli</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>© 2026 Toko Buku Kita. Semua hak cipta dilindungi.</footer>
+    </body>
+
+    </html>

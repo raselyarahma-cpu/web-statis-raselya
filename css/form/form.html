@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login System</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+      }
+      body {
+        background-color: #f4f6f8;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 420px;
+        padding: 40px 32px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+      .header {
+        margin-bottom: 28px;
+      }
+      .header h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1d20;
+        margin-bottom: 6px;
+      }
+      .header p {
+        font-size: 14px;
+        color: #6c757d;
+      }
+      .header a {
+        color: #4f46e5;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .header a:hover {
+        text-decoration: underline;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #344054;
+      }
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid #d0d5dd;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        transition: all 0.2s ease;
+      }
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+      }
+      .remember-forgot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        color: #344054;
+      }
+      .checkbox-container input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        accent-color: #4f46e5;
+        cursor: pointer;
+      }
+      .btn-submit {
+        width: 100%;
+        padding: 12px;
+        background-color: #4f46e5;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+      .btn-submit:hover {
+        background-color: #4338ca;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="header">
+        <h3>Masuk ke Akun</h3>
+        <p>Belum punya akun? <a href="#">Daftar sekarang</a></p>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="nama@email.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Kata Sandi</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+        <div class="remember-forgot">
+          <label class="checkbox-container">
+            <input type="checkbox" /> Ingat saya
+          </label>
+          <a href="#" style="color: #4f46e5; text-decoration: none"
+            >Lupa sandi?</a
+          >
+        </div>
+        <button type="submit" class="btn-submit">Masuk</button>
+      </form>
+    </div>
+  </body>
+</html>

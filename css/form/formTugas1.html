@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        background-color: #f1f4f4;
+      }
+      .form-box {
+        width: 650px;
+        margin: 80px auto;
+        padding: 25px 40px;
+        background: linear-gradient(to bottom, #e7c4a5, #f0e4dc, #e8e8e8);
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        margin: 20px 0 45px;
+      }
+      table {
+        width: 100%;
+        border-spacing: 0 15px;
+      }
+      td:first-child {
+        width: 170px;
+        font-size: 18px;
+        white-space: nowrap;
+      }
+      input,
+      select,
+      textarea {
+        font-family: "Times New Roman", serif;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="number"] {
+        width: 100%;
+        height: 29px;
+        padding: 4px;
+      }
+      .nama {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .nama input {
+        min-width: 0;
+        flex: 1;
+      }
+      .tanggal {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .tanggal input {
+        width: 55px;
+        height: 27px;
+      }
+      .tanggal input:last-of-type {
+        width: 85px;
+      }
+      .telepon {
+        display: flex;
+        gap: 7px;
+      }
+      .telepon input:first-child {
+        width: 55px;
+      }
+      .telepon input:last-child {
+        flex: 1;
+        min-width: 0;
+      }
+      .pilihan {
+        white-space: nowrap;
+        font-size: 17px;
+      }
+      select {
+        width: 100%;
+        height: 30px;
+      }
+      input[type="file"] {
+        max-width: 100%;
+      }
+      textarea {
+        width: 100%;
+        height: 85px;
+        resize: vertical;
+      }
+      .tombol {
+        text-align: center;
+        padding-top: 5px;
+      }
+      button {
+        padding: 3px 12px;
+        font-family: "Times New Roman", serif;
+        cursor: pointer;
+      }
+      @media (max-width: 680px) {
+        .form-box {
+          width: 100%;
+          margin: 20px auto;
+          padding: 20px 15px;
+        }
+        h1 {
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+        td:first-child {
+          width: 125px;
+          font-size: 15px;
+        }
+        .pilihan {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-box">
+      <h1>Student Registration Form</h1>
+      <form>
+        <table>
+          <tr>
+            <td>Roll no. :</td>
+            <td><input type="text" name="roll" /></td>
+          </tr>
+          <tr>
+            <td>Student name :</td>
+            <td>
+              <div class="nama">
+                <input type="text" name="first_name" placeholder="First Name" />
+                <span>-</span>
+                <input type="text" name="last_name" placeholder="Last Name" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Father's name :</td>
+            <td><input type="text" name="father_name" /></td>
+          </tr>
+          <tr>
+            <td>Date of birth :</td>
+            <td>
+              <div class="tanggal">
+                <input type="text" placeholder="Day" name="day" />
+                <span>-</span>
+                <input type="text" placeholder="Month" name="month" />
+                <span>-</span>
+                <input type="text" placeholder="Year" name="year" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile no. :</td>
+            <td>
+              <div class="telepon">
+                <input type="text" value="+91" name="kode" />
+                <input type="tel" name="mobile" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Email id :</td>
+            <td><input type="email" name="email" /></td>
+          </tr>
+          <tr>
+            <td>Password :</td>
+            <td><input type="password" name="password" /></td>
+          </tr>
+          <tr>
+            <td>Gender :</td>
+            <td class="pilihan">
+              <label>
+                <input type="radio" name="gender" value="Male" /> Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Female" /> Female
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>Department :</td>
+            <td class="pilihan">
+              <label
+                ><input type="checkbox" name="department" value="CSE" />
+                CSE</label
+              >
+              <label
+                ><input type="checkbox" name="department" value="IT" />
+                IT</label
+              >
+              <label
+                ><input type="checkbox" name="department" value="ECE" />
+                ECE</label
+              >
+              <label
+                ><input type="checkbox" name="department" value="Civil" />
+                Civil</label
+              >
+              <label
+                ><input type="checkbox" name="department" value="Mech" />
+                Mech</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Course :</td>
+            <td>
+              <select name="course">
+                <option value="">Select Current Courses</option>
+                <option>Web Development</option>
+                <option>Software Engineering</option>
+                <option>Computer Science</option>
+                <option>Information Technology</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Student photo :</td>
+            <td><input type="file" name="photo" accept="image/*" /></td>
+          </tr>
+          <tr>
+            <td>City :</td>
+            <td><input type="text" name="city" /></td>
+          </tr>
+          <tr>
+            <td>Address :</td>
+            <td><textarea name="address"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="tombol">
+              <button type="submit">Register</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
